@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<title>JavaScript Quiz</title>
+<style>
+body {
+background-image: url('mascot-2.jpg');
+background-repeat: repeat;
+background-attachment: fixed;
+font-family: Helvetica;
+}
+
+#main {
+width: 75%;
+max-width: 550px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+padding: 5px;
+color: white;
+}
+
+label {
+display: block;
+}
+
+input {
+width: 60px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+</style>
+
+
+</head>
+  <body>
+   <div id="main">
+<div id="header">
+<center><img src="map2.jpg" class="round" width="100%"></center></br>
+
+</div>
+    <h1>How Well Do You Know College Mascots?</h1>
+       
+	  				
+
+                <h4><img src="acc.jpg" <h4>
+          <div class="scroll">
+            <form method="post" id="myForm" name="f">
+              <ol>
+                <li>
+               Although this school is known as a force of nature, what team mascot
+                was arrested in the early 2000's ?
+                  <select name="question1">
+                    <option value="na">&nbsp;</option>
+                    <option value="a"> Syracuse </option>   
+                    <option value="b"> Iowa State </option>
+                      <option value="c"> The University of Miami </option>  
+                  </select> 
+               
+                </li>
+                <li>
+                 Named for the previous inhabitants of the area, "The Seminoles" represent
+                 which ACC team?
+                  <select name="question2">
+                   <option value="na">&nbsp;</option>
+                    <option value="a"> Clemson </option>   
+                    <option value="b"> Florida State University </option>
+                      <option value="c"> Virginia Tech </option>  
+                  </select>
+                
+                </li>
+              
+                    <h4><img src="big10.jpg"</h4>
+          <div class="scroll">
+            <form method="post" id="myForm" name="f">
+              
+                <li>
+               A common food allergy, Brutus belongs to which Big 10 team?
+                  <select name="question3">
+                    <option value="na">&nbsp;</option>
+                    <option value="a"> Indiana University </option>   
+                    <option value="b"> Michigan </option>
+                      <option value="c"> Ohio State University </option>  
+                  </select> 
+                
+                </li>
+                <li>
+                 The ferocious,"Bucky Badger", belongs what University? 
+                  <select name="question4">
+                   <option value="na">&nbsp;</option>
+                    <option value="a"> Notre Dame </option>   
+                    <option value="b"> Wisconsin </option>
+                      <option value="c"> Michigan State </option>  
+                  </select>
+                
+                </li>
+            
+                    <h4><img src="pac12.jpg"</h4>
+          <div class="scroll">
+            <form method="post" id="myForm" name="f">
+             
+                <li>
+              The motto for this school's mascot should read, "beware of Greeks bearing gifts." 
+                  <select name="question5">
+                    <option value="na">&nbsp;</option>
+                    <option value="a"> University of Southern California</option>   
+                    <option value="b"> Michigan State University </option>
+                      <option value="c"> University of California Los Angeles  </option>  
+                  </select> 
+                
+                </li>
+                <li>
+                 Which University shares the same mascot as this 1990's sports/comedy movie starring "Emilio Estevez"?
+                  <select name="question6">
+                   <option value="na">&nbsp;</option>
+                    <option value="a"> Washington State University </option>   
+                    <option value="b"> University of Oregon </option>
+                      <option value="c"> Stanford University </option>  
+                  </select>
+                 
+                </li>
+              
+              
+          <h4> <img src="pow5.jpg" </h4>
+          <div class="scroll">
+            <form method="post" id="myForm" name="f">
+              
+                <li>
+               What School does "Big Al", the mascot who never forgets, belong to?
+                  <select name="question7">
+                    <option value="na">&nbsp;</option>
+                    <option value="a"> Alabama </option>   
+                    <option value="b"> Mississippi State </option>
+                      <option value="c"> Louisiana State </option>  
+                  </select> 
+                
+                </li>
+                <li>
+                  Which school offers a self identified "Rebel" as its mascot?                  
+                  <select name="question8">
+                   <option value="na">&nbsp;</option>
+                    <option value="a"> Georgia </option>   
+                    <option value="b"> Ole Miss</option>
+                    <option value="c"> Texas A&M </option>  
+                  </select>
+                 
+                </li>
+              
+                <h4><img src="big12.jpg"</h4>
+          <div class="scroll">
+            <form method="post" id="myForm" name="f">
+              
+                <li>
+               What school's horned mascot is known to shoot blood out of its eye? 
+                  <select name="question9">
+                    <option value="na">&nbsp;</option>
+                    <option value="a"> Texas Christian University </option>   
+                    <option value="b"> University of Texas</option>
+                      <option value="c"> Duke </option>  
+                  </select> 
+                
+                </li>
+                <li>
+                 What school's mascot is known to carry several guns and sport a red mustache?
+                  <select name="question10">
+                   <option value="na">&nbsp;</option>
+                    <option value="a"> Baylor </option>   
+                    <option value="b"> Oklahoma State University </option>
+                      <option value="c"> Texas Tech University </option>  
+                  </select>
+                 
+                </li>
+              </ol>
+            
+            <br>
+            <input type="submit" id="submit" value="Results" />
+              <input type="reset" class="reset" id="reset" name="reset" value="Restart" />
+            </form>
+             <div id="score"></div> 
+               <div class="address">
+           
+            </div>
+          </div> 
+        </div> 
+      </div> 
+    </div>
+    
+    <script>
+      Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+          if (obj.hasOwnProperty(key)) size++;
+        }
+        return size;
+      };
+      
+      (function(){
+        "use strict";
+        window.checkAnswers = function(opts){
+          
+          function validateInput(){
+            var question,
+                answer;
+                
+            for (question in opts) {
+              if(opts.hasOwnProperty(question)) {
+                answer = f.elements[question].options[f.elements[question].selectedIndex].value;
+                if(answer === "na"){
+                  opts[question].state = "not-filled-in";
+                } else if(answer === opts[question].answer){
+                  opts[question].state = "correct";
+                } else {
+                  opts[question].state = "error";
+                }
+              }
+            }
+          }
+          
+          function markCorrectOrIncorrect(){
+            var question, 
+                li;
+            
+            for (question in opts) {
+              if(opts.hasOwnProperty(question)) {
+                var img = new Image(),
+                li = f.elements[question].parentElement,
+                feedbackImg = li.getElementsByTagName('img')[0];
+
+                if (feedbackImg){
+                  li.removeChild(feedbackImg);
+                }
+                
+                if(opts[question].state === "correct"){
+                  img.src = "1touchdown.jpg";
+                  li.appendChild(img)
+                } else if(opts[question].state === "error"){
+                  img.src = "nogood1.jpg";
+                  li.appendChild(img)
+                }
+              }
+            }
+          }
+          
+          function displayScore(){
+            var correct = 0,
+                error = 0,
+                score = document.getElementById("score"),
+                totalQuestions = Object.size(opts),
+                question;
+
+            for (question in opts) {
+              if(opts.hasOwnProperty(question)) {
+                if(opts[question].state === "correct"){
+                  correct ++
+                } else if(opts[question].state === "error"){
+                  error ++
+                }
+              }
+            }
+            score.innerHTML = "You got " + correct + " out of " + totalQuestions;
+          }
+          
+          function init(){
+            validateInput();
+            markCorrectOrIncorrect();
+            displayScore();
+          }
+          
+          init();
+        }
+      }());
+
+      f.onsubmit = function(){
+        checkAnswers({
+          question1: {answer: "c"},
+          question2: {answer: "b"},
+          question3: {answer: "c"},
+          question4: {answer: "b"},
+          question5: {answer: "a"},
+          question6: {answer: "b"},
+          question7: {answer: "a"},
+          question8: {answer: "b"},
+          question9: {answer: "a"},
+          question10: {answer: "c"},
+        
+        })
+        return false;
+      }
+      
+    f.reset.onclick = function(){
+  var imgs = document.querySelectorAll('img');
+  for(var i=0; i<imgs.length; i++){
+    imgs[i].parentNode.removeChild(imgs[i]);
+  }
+
+  document.getElementById("score").innerHTML = "";
+}
+
+
+    </script> 
+  </body>
+</html>
